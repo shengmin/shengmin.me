@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="shengmin-website" basedir="." default="build-debug">
+	<target name="build-debug">
+		<echo message="${PROJECT_LIB}"/>
+	</target>
+</project>

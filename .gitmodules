@@ -1,0 +1,3 @@
+[submodule "quirkyjs"]
+	path = quirkyjs
+	url = git@git.assembla.com:quirkyjs.git
