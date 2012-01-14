@@ -1,0 +1,4 @@
+*.jar
+appengine-generated
+classes
+
