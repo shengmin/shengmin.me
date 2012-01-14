@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="shengmin-website" basedir="." default="build-debug">
+<project name="shengmin.website" basedir="." default="build-debug">
+
+	<property name="src.dir" location="${basedir}/src" />
+	<property name="war.dir" location="${basedir}/war" />
+
+	<property name="htm.src.dir" location="${src.dir}/htm" />
+
 	<target name="build-debug">
-		<echo message="${PROJECT_LIB}"/>
+		<property name="build.mode" value="debug" />
+		<property name="debug" value="true" />
+
+		<copy todir="${war.dir}">
+			<fileset dir="${src.dir}">
+				<include name="js/**/*.js" />
+				<exclude name="htm/**" />
+			</fileset>
+		</copy>
+
+		<copy todir="${war.dir}">
+			<fileset dir="${htm.src.dir}">
+				<include name="**/*.htm" />
+			</fileset>
+		</copy>
+
+	</target>
+
+	<target name="clean">
+		<delete includeemptydirs="true">
+			<fileset dir="${war.dir}">
+				<include name="**/*.htm" />
+			</fileset>
+		</delete>
 	</target>
 </project>
