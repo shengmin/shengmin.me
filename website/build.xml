@@ -5,7 +5,16 @@
 	<property name="war.dir" location="${basedir}/war" />
 
 	<property name="htm.src.dir" location="${src.dir}/htm" />
+	
+	<property name="scss.src.dir" location="${src.dir}/scss" />
 
+	<target name="-compile-sass">
+		<exec executable="sass" vmlauncher="false" dir="${basedir}">
+			<arg line="--style expanded" />
+			<arg line="--update src/scss:war/css" />
+		</exec>
+	</target>
+	
 	<target name="build-debug">
 		<property name="build.mode" value="debug" />
 		<property name="debug" value="true" />
@@ -23,12 +32,15 @@
 			</fileset>
 		</copy>
 
+		<antcall target="-compile-sass"></antcall>
+		
 	</target>
 
 	<target name="clean">
-		<delete includeemptydirs="true">
+		<delete>
 			<fileset dir="${war.dir}">
 				<include name="**/*.htm" />
+				<include name="**/*.css" />
 			</fileset>
 		</delete>
 	</target>

@@ -1,0 +1,3 @@
+- use FreeMarker template engine to generate HTML/JavaScript/Java source codes based on different build configuration
+- replace ExtJS 4 with my own JavaScript library QuirkyJS
+- minify CSS/JavaScript/HTML and concatenate JavaScript for deployment build

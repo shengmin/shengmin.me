@@ -1,0 +1,88 @@
+$border-color: #C4CDE0;
+$border: 1px solid $border-color;
+
+$profile-picture-left: 30px;
+$profile-picture-width: 125px;
+
+
+body {
+    font-family: Arial, Helvetica, Times New Roman, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.centered-container {
+    text-align: left;
+    margin: 0 auto;
+}
+
+.header-container {
+	@extend .centered-container;
+	position: relative; 
+	border-bottom: $border; 
+	width: 800px;
+	height: 130px;
+	margin-bottom: 30px;
+}
+
+.profile-picture-container {
+	border-radius: 3px; 
+	border: $border; 
+	position: absolute; 
+	bottom: -20px; 
+	left: $profile-picture-left; 
+	width: $profile-picture-width; 
+	height: 125px; 
+	background-color: white; 
+	overflow: hidden;
+}
+
+.profile-picture {
+	width: 100%;
+	height: auto;
+}
+
+.header {
+	font-weight: bold;
+	color: #3B5998;
+}
+
+.name-container {
+	@extend .header;
+	font-size: 25px;
+	position: absolute;
+	left: $profile-picture-left + $profile-picture-width + 35;
+	bottom: 30px;
+}
+
+.timeline-container {
+	@extend .centered-container;
+	width: 700px;
+}
+
+.timeline-date-cell {
+	@extend .header;
+	width: 80px;
+	vertical-align: text-top;
+	border-top: $border;
+	border-right: $border;
+	padding: 5px;
+	text-align: right;
+}
+
+.timeline-date-cell-year {
+	@extend .timeline-date-cell;
+	font-size: 25px;
+}
+
+.timeline-date-cell-month {
+	@extend .timeline-date-cell;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.timeline-content-cell {
+	border: $border;
+	padding: 10px;
+}
