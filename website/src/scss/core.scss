@@ -25,16 +25,20 @@ body {
 	margin-bottom: 30px;
 }
 
+.picture-container {
+	border-radius: 3px;
+	border: $border;
+	position: absolute;
+	background-color: white; 
+	overflow: hidden;
+}
+
 .profile-picture-container {
-	border-radius: 3px; 
-	border: $border; 
-	position: absolute; 
+	@extend .picture-container;
 	bottom: -20px; 
 	left: $profile-picture-left; 
 	width: $profile-picture-width; 
 	height: 125px; 
-	background-color: white; 
-	overflow: hidden;
 }
 
 .profile-picture {
@@ -85,4 +89,55 @@ body {
 .timeline-content-cell {
 	border: $border;
 	padding: 10px;
+}
+
+.timeline-content-container {
+	background-color: #D8DFEA; 
+	position: relative; 
+	border-bottom: $border; 
+	border-top: $border; 
+	height: 30px; 
+	margin-bottom: 30px; 
+	margin-top: 20px;
+}
+
+$timeline-picture-width: 50px;
+$timeline-picture-height: 50px;
+$timeline-picture-left: 10px;
+
+.timeline-picture-container {
+	@extend .picture-container;
+	position: absolute; 
+	left: $timeline-picture-left; 
+	bottom: -10px;
+	width: $timeline-picture-width;
+	height: $timeline-picture-height;
+}
+
+.timeline-title-container {
+	@extend .header;
+	position: absolute; 
+	left: $timeline-picture-width + $timeline-picture-left + 10; 
+	bottom: 8px; 
+	font-size: 12px; 
+	width: 500px;
+	cursor: default;
+}
+
+.timeline-title-left {
+	float: left;
+}
+
+.timeline-title-right {
+	text-align: right;
+}
+
+li.timeline-highlight {
+	margin: 4px;
+	list-style-type: disc;
+	list-style-position:inside;
+}
+
+ul.timeline-highlight {
+	margin: 4px 0 4px 0;
 }
