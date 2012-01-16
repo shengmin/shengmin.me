@@ -161,38 +161,6 @@
 							});
 						})();
 						
-						
-// 						
-						// (function(){
-							// var timer = null;
-// 						
-// 							
-// 							
-							// eventCellEl.on('mouseleave', function(e, dom){
-								// var nextElement = Ext.fly(dom).next();
-								// if(timer) clearTimeout(timer);
-								// timer = setTimeout(function(){
-									// nextElement.hide(true);
-								// }, 1500);
-							// });
-// 							
-							// highlightEl.on('mouseenter', function(e, dom){
-								// if(timer) {
-									// clearTimeout(timer);
-									// timer = null;
-								// }
-							// });
-// 							
-							// highlightEl.on('mouseleave', function(e, dom){
-								// var el = Ext.get(dom);
-								// if(timer) clearTimeout(timer);
-								// timer = setTimeout(function(){
-									// el.hide(true);
-								// }, 1500);
-							// });
-						// })();
-						
-						
 					}
 				}
 			}

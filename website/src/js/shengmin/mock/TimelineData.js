@@ -71,7 +71,7 @@
 		month: 9,
 		events: [
 			new Event({
-				title: 'Started internship at Oracle as Software Engineer',
+				title: 'Started internship at Oracle as Software Engineering Intern',
 				location: 'Boston, MA',
 				pictureUrl: 'img/content/oracle.jpg',
 				highlights: [
@@ -105,7 +105,7 @@
 		month: 1,
 		events: [
 			new Event({
-				title: 'Started internship at NexJ Systems as Framework Developer',
+				title: 'Started internship at NexJ Systems as Framework Developer Intern',
 				pictureUrl: 'img/content/nexj.jpg',
 				location: 'Toronto, ON',
 				highlights: [
@@ -164,6 +164,11 @@
 			new Event({
 				title: 'Worked with VB.NET',
 				pictureUrl: 'img/content/vb_dot_net.jpg'
+			}),
+			
+			new Event({
+				title: 'Worked with SQL Server',
+				pictureUrl: 'img/content/sql_server.jpg'
 			})
 		]
 	}, {
@@ -194,7 +199,7 @@
 		month: 5,
 		events: [
 			new Event({
-				title: 'Started internship at Roadpost as Software Engineer',
+				title: 'Started internship at Roadpost as Software Developer Intern',
 				location: 'Mississauga, ON',
 				pictureUrl: 'img/content/roadpost.jpg',
 				highlights: [
@@ -286,12 +291,9 @@
 			new Event({
 				title: 'Started using jQuery as the main JavaScript library for hobby projects',
 				pictureUrl: 'img/content/jquery.jpg'
-			}),
-			
-			new Event({
-				title: 'Started using SQL Server',
-				pictureUrl: 'img/content/sql_server.jpg'
 			})
+			
+			
 		]
 	}, {
 		year: 2005,
