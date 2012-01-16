@@ -8,6 +8,9 @@
     <include path="/**.gif" expiration="30d" />
     <include path="/**.js" expiration="1d" />
     <include path="/**.css" expiration="1d" />
+    <include path="/favicon.ico" expiration="30d" />
+    <include path="/**.htm" expiration="1d" />
+    <include path="/**.html" expiration="30d" />
   </static-files>
 
   <!--

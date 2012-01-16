@@ -4,10 +4,9 @@
 	model.Event = function(config) {
 		Ext.apply(this, config);
 		this.highlights = this.highlights || [];
-		this.pictureUrl = this.pictureUrl || 'img/content/no_pic.gif';
 	};
 
-	Event.prototype = {
+	model.Event.prototype = {
 		/**
 		 * @property {String}
 		 */
@@ -16,7 +15,7 @@
 		/**
 		 * @property {String} [pictureUrl=img/content/no_pic.gif]
 		 */
-		pictureUrl : '',
+		pictureUrl : 'img/content/no_pic.gif',
 
 		/**
 		 * @property {String[]}
