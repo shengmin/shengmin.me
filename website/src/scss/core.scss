@@ -1,19 +1,35 @@
 $border-color: #C4CDE0;
 $border: 1px solid $border-color;
+$thick-border: 2px solid $border-color;
 
 $profile-picture-left: 30px;
 $profile-picture-width: 125px;
 
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
 
 body {
-    font-family: Arial, Helvetica, Times New Roman, sans-serif;
-    font-size: 14px;
-    text-align: center;
+	font-family: Arial, Helvetica, Times New Roman, sans-serif;
+	font-size: 14px;
+	text-align: center;
 }
 
 .centered-container {
-    text-align: left;
-    margin: 0 auto;
+	text-align: left;
+	margin: 0 auto;
 }
 
 .header-container {
@@ -62,6 +78,7 @@ body {
 .timeline-container {
 	@extend .centered-container;
 	width: 700px;
+	margin-bottom: 50px;
 }
 
 .timeline-date-cell {
@@ -77,6 +94,7 @@ body {
 .timeline-date-cell-year {
 	@extend .timeline-date-cell;
 	font-size: 25px;
+	//border-top: $thick-border;
 }
 
 .timeline-date-cell-month {
@@ -86,9 +104,14 @@ body {
 	font-weight: normal;
 }
 
-.timeline-content-cell {
+td.timeline-content-cell-month {
 	border: $border;
-	padding: 10px;
+	padding: 0 0 30px 0;
+	position: relative;
+}
+
+.timeline-content-cell-year {
+	@extend .timeline-content-cell-month;
 }
 
 .timeline-content-container {
@@ -97,8 +120,9 @@ body {
 	border-bottom: $border; 
 	border-top: $border; 
 	height: 30px; 
-	margin-bottom: 30px; 
-	margin-top: 20px;
+	//margin-bottom: 30px; 
+	margin-top: 40px;
+	//cursor: pointer;
 }
 
 $timeline-picture-width: 50px;
@@ -133,11 +157,32 @@ $timeline-picture-left: 10px;
 }
 
 li.timeline-highlight {
-	margin: 4px;
+	margin: 2px;
 	list-style-type: disc;
-	list-style-position:inside;
+	list-style-position: inside;
+	text-align: left;
+	font-size: 13px;
 }
 
 ul.timeline-highlight {
-	margin: 4px 0 4px 0;
+	margin: 2px 0 2px 0;
+}
+
+div.timeline-highlight-wrapper {
+	width: 100%; 
+	position: relative; 
+	display: none;
+	z-index: 1000;
+}
+
+div.timeline-highlight-container {
+	position: absolute; 
+	right: 10px; 
+	border-radius: 0 0 5px 5px; 
+	border: $border;
+	width: 520px;
+	padding: 15px;
+	background-color: white;
+	border-top: 0;
+	color: #3B5998;
 }
