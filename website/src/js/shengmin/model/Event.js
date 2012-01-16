@@ -2,10 +2,9 @@
 	var model = Ext.ns('shengmin.model');
 
 	model.Event = function(config) {
-		config.highlights = config.highlights || [];
-		
 		Ext.apply(this, config);
-		
+		this.highlights = this.highlights || [];
+		this.pictureUrl = this.pictureUrl || 'img/content/no_pic.gif';
 	};
 
 	Event.prototype = {
@@ -15,24 +14,14 @@
 		title : '',
 
 		/**
-		 * @property {String} [pictureUrl]
+		 * @property {String} [pictureUrl=img/content/no_pic.gif]
 		 */
-		pictureUrl : 'img/content/no_pic.gif',
+		pictureUrl : '',
 
 		/**
 		 * @property {String[]}
 		 */
 		highlights : null,
-
-		/**
-		 * @property {Integer}
-		 */
-		year : -1,
-
-		/**
-		 * @property {Integer} [month]
-		 */
-		month : -1,
 
 		/**
 		 * @property {String} [location]

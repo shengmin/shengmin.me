@@ -143,7 +143,7 @@
 								if(timer) clearTimeout(timer);
 								timer = setTimeout(function(){
 									highlightEl.hide(true);
-								}, 500);
+								}, 100);
 							});
 							
 							highlightEl.on('mouseenter', function(){
@@ -157,7 +157,7 @@
 								if(timer) clearTimeout(timer);
 								timer = setTimeout(function(){
 									highlightEl.hide(true);
-								}, 500);
+								}, 100);
 							});
 						})();
 						
