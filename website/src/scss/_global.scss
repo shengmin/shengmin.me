@@ -1,0 +1,26 @@
+// Define global variables
+
+$border-color: #C4CDE0;
+$border: 1px solid $border-color;
+
+// Define global mixins
+
+// An IE workarounds for centering the children elements
+@mixin center-children {
+	text-align: center;
+}
+
+@mixin center-this {
+	text-align: left;
+	margin: 0 auto;
+}
+
+@mixin picture-container {
+	border-radius: 3px;
+	border: $border;
+	position: absolute;
+	overflow: hidden;
+	background-color: white;
+}
+
+

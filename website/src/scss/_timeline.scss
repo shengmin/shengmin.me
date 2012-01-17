@@ -1,0 +1,125 @@
+@import "global";
+
+.ui-timeline-container {
+	@include center-this;
+	
+	width: 700px;
+	margin-bottom: 50px;
+	
+	table {
+		width: 100%;
+	}
+	
+	td.date-cell {
+		@extend .title;
+		
+		width: 80px;
+		vertical-align: text-top;
+		border-top: $border;
+		border-right: $border;
+		padding: 5px;
+		text-align: right;
+	}
+	
+	td.date-cell-year {
+		@extend td.date-cell;
+		
+		font-size: 25px;
+	}
+	
+	td.date-cell-month {
+		@extend td.date-cell;
+		
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+	
+	td.content-cell {
+		border: $border;
+		padding: 0 0 20px 0;
+		position: relative;
+		
+		$background-color: #D8DFEA;
+		
+		div.event-container {
+			background-color: lighten($background-color, 7%); 
+			position: relative; 
+			border-bottom: $border; 
+			border-top: $border; 
+			height: 30px; 
+			margin-top: 25px;
+			
+			$picture-width: 50px;
+			$picture-left: 10px;
+			
+			div.picture-container {
+				@include picture-container;
+				
+				position: absolute; 
+				left: $picture-left; 
+				bottom: -10px;
+				width: $picture-width;
+				height: 50px;
+			}
+			
+			.description-container {
+				@extend .title;
+				
+				position: absolute; 
+				left: $picture-width + $picture-left + 10; 
+				bottom: 8px; 
+				font-size: 12px; 
+				width: 530px;
+				cursor: default;
+				
+				.left-column {
+					float: left;
+				}
+				
+				.right-column {
+					text-align: right;
+				}
+			}
+		}
+		
+		div.event-container-highlight {
+			@extend div.event-container;
+			
+			background-color: $background-color;
+		}
+		
+		div.highlight-wrapper {
+			width: 100%; 
+			position: relative; 
+			display: none;
+			z-index: 1000;
+			
+			div.highlight-container {
+				position: absolute; 
+				right: 10px; 
+				border-radius: 0 0 5px 5px; 
+				border: $border;
+				width: 520px;
+				padding: 15px;
+				background-color: white;
+				border-top: 0;
+				color: #3B5998;
+				
+				li {
+					margin: 4px;
+					list-style-type: disc;
+					list-style-position: inside;
+					text-align: left;
+					font-size: 13px;
+				}
+				
+				ul {
+					margin: 2px 0 2px 0;
+				}
+			}
+		}
+
+	}
+
+}

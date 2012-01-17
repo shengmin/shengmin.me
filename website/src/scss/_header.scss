@@ -1,0 +1,37 @@
+@import "global";
+
+.header-container {
+	@include center-this;
+	
+	position: relative;
+	border-bottom: $border;
+	width: 800px;
+	height: 130px;
+	margin-bottom: 30px;
+	
+	$picture-left: 80px;
+	$picture-width: 125px;
+	
+	div.picture-container {
+		@include picture-container;
+		
+		bottom: -20px; 
+		left: $picture-left; 
+		width: $picture-width; 
+		height: 125px; 
+	}
+	
+	.content-container {
+		font-size: 25px;
+		position: absolute;
+		left: $picture-left + $picture-width + 35;
+		bottom: 10px;
+		
+		.link-container {
+			font-size: 11px;
+			margin: 5px;
+			margin-left: 30px;
+		}
+	}
+	
+}

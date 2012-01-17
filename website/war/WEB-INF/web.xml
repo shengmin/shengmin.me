@@ -15,6 +15,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<welcome-file-list>
 		<welcome-file>index.htm</welcome-file>
 	</welcome-file-list>
+	
 	<mime-mapping>
         <extension>css</extension>
         <mime-type>text/css</mime-type>

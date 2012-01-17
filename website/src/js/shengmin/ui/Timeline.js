@@ -17,24 +17,24 @@
 	
 	var ROW_TEMPLATE = new Ext.Template(
 		'<tr>',
-			'<td class="timeline-date-cell-{dateType}">{date}</td>',
-			'<td class="timeline-content-cell-{dateType}">{events}</td>',
+			'<td class="date-cell-{dateType}">{date}</td>',
+			'<td class="content-cell">{events}</td>',
 		'</tr>'
 	).compile();
 	
 	var EVENT_TEMPLATE = new Ext.Template(
-		'<div id="{id}" class="timeline-content-container">',
-			'<div class="timeline-picture-container"><img class="profile-picture" src="{picUrl}" /></div>',
-			'<div class="timeline-title-container">',
-				'<div class="timeline-title-left">{title}</div>',
-				'<div class="timeline-title-right">{location}</div>',
+		'<div id="{id}" class="event-container{highlight}">',
+			'<div class="picture-container"><img class="wrapped-picture" src="{picUrl}" /></div>',
+			'<div class="description-container">',
+				'<div class="left-column">{title}</div>',
+				'<div class="right-column">{location}</div>',
 			'</div>',
 		'</div>'
 	).compile();
 	
 	var HIGHLIGHT_TEMPLATE = new Ext.Template(
-		'<div class="timeline-highlight-wrapper">',
-			'<div class="timeline-highlight-container">{highlights}</div>',
+		'<div class="highlight-wrapper">',
+			'<div class="highlight-container">{highlights}</div>',
 		'</div>'
 	).compile();
 	
@@ -55,12 +55,12 @@
 		onRender : function() {
 			this.autoEl = {
 				tag: 'div',
-				cls: 'timeline-container'
+				cls: 'ui-timeline-container'
 			};
 			this.callParent(arguments);
 			var el = this.getEl();
 			var eventsBuffer = [];
-			var buffer = ['<table style="width: 100%;">'];
+			var buffer = ['<table>'];
 			
 			var data = this.eventsData;
 			for(var i = 0, len = data.length; i < len; i++) {
@@ -86,7 +86,8 @@
 						picUrl: evt.pictureUrl,
 						title: evt.title,
 						location: evt.location,
-						id: eventCellId
+						id: eventCellId,
+						highlight: (evt.highlights.length === 0) ? '' : '-highlight'
 					});
 				}
 				
@@ -103,13 +104,11 @@
 			
 			el.update(buffer.join(''));
 			
-			var timers = [];
 			
 			// adding popup for displaying highlights
 			for(var i = 0, nTime = data.length; i < nTime; i++) {
 				var time = data[i];
 				var events = time.events;
-				timers[i] = [];
 				
 				for(var j = events.length - 1; j >= 0; j--) {
 					var evt = events[j];
@@ -118,14 +117,15 @@
 					
 					if(highlights && highlights.length !== 0) {
 						buffer.length = 0;
-						buffer[buffer.length] = '<ul class="timeline-highlight">';
+						buffer[buffer.length] = '<ul>';
 						for(var k = 0, len = highlights.length; k < len; k++) {
-							buffer[buffer.length] = '<li class="timeline-highlight">';
+							buffer[buffer.length] = '<li>';
 							buffer[buffer.length] = highlights[k];
 							buffer[buffer.length] = '</li>';
 						}
 						buffer[buffer.length] = '</ul>';
 						
+						// need to create another scope so that each event gets its own timer
 						(function() {
 							var timer = null;
 							var eventCellEl = Ext.fly(eventCellId);

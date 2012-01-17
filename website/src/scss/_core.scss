@@ -1,0 +1,21 @@
+@import "global";
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: Arial, Helvetica, Times New Roman, sans-serif;
+	font-size: 14px;
+	@include center-children;
+}
+
+img.wrapped-picture {
+	width: 100%;
+	height: auto;
+}
+
+.title {
+	font-weight: bold;
+	color: #3B5998;
+}
