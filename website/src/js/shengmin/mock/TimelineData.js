@@ -175,7 +175,7 @@
 		month: 12,
 		events: [
 			new Event({
-				title: 'Started NotesRender project with <a target="_blank" href="https://plus.google.com/109162859755475455960">Peter Wen</a> and <a target="_blank" href="https://plus.google.com/110510064982156600409">Hanson Wang</a>',
+				title: 'Started NotesRender project with <a target="_blank" href="http://www.linkedin.com/pub/wei-nan-wen/21/561/774">Peter Wen</a> and <a target="_blank" href="http://www.linkedin.com/pub/hanson-wang/21/a66/186">Hanson Wang</a>',
 				highlights: [
 					'A website for sharing course materials',
 					'Java back end, JavaScript front end, currently built on top of ExtJS 4, and MySQL as the database',
@@ -276,7 +276,8 @@
 				title: 'Started programming in JavaScript',
 				pictureUrl: 'img/content/js.png',
 				highlights: [
-					"I'm a JavaScript Ninja"
+					"I'm a JavaScript Ninja",
+					'Google Dart is a nice alternative, but lacks native browser support and an efficient Dart-to-JavaScript compiler'
 				]
 			}),
 			
@@ -284,8 +285,23 @@
 				title: 'Started programming in C#',
 				pictureUrl: 'img/content/csharp.png',
 				highlights: [
-					'Strong knowledge and experience in C#'
+					'Very strong knowledge and experience in C#',
+					'Aware of and experienced with almost all language features',
+					'Personal opinion: C# is a nicer language than Java'
 				]
+			}),
+			
+			new Event({
+				title: 'Started developing .NET applications, ASP.NET in particular',
+				pictureUrl: 'img/content/dot_net.jpg',
+				highlights: [
+					'I would have sticked with .NET for developing web applications if Mono were mature enough'
+				]
+			}),
+			
+			new Event({
+				title: 'Started using Visual Studio for .NET application development',
+				pictureUrl: 'img/content/visual_studio.jpg'
 			}),
 			
 			new Event({
@@ -307,6 +323,8 @@
 				title: 'Started using CSS',
 				pictureUrl: 'img/content/css.jpg'
 			})
+			
+			
 		]
 	}];
 	

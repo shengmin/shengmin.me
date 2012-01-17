@@ -2,7 +2,7 @@ $border-color: #C4CDE0;
 $border: 1px solid $border-color;
 $thick-border: 2px solid $border-color;
 
-$profile-picture-left: 30px;
+$profile-picture-left: 80px;
 $profile-picture-width: 125px;
 
 a:link {
@@ -67,12 +67,19 @@ body {
 	color: #3B5998;
 }
 
-.name-container {
+.header-content-container {
 	@extend .header;
 	font-size: 25px;
 	position: absolute;
 	left: $profile-picture-left + $profile-picture-width + 35;
-	bottom: 30px;
+	bottom: 10px;
+}
+
+.link-container {
+	font-size: 11px;
+	margin: 5px;
+	margin-left: 30px;
+	font-weight: normal;
 }
 
 .timeline-container {
