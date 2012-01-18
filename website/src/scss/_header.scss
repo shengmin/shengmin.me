@@ -1,5 +1,14 @@
 @import "global";
 
+$color: #3B5998;
+
+@mixin text-container($level, $font-size) {
+	font-size : $font-size;
+	margin: 5px;
+	margin-left: 30px * $level;
+	color: $color;
+}
+
 .header-container {
 	@include center-this;
 	
@@ -11,27 +20,40 @@
 	
 	$picture-left: 80px;
 	$picture-width: 125px;
+	$picture-bottom: -20px;
 	
 	div.picture-container {
 		@include picture-container;
 		
-		bottom: -20px; 
+		bottom: $picture-bottom; 
 		left: $picture-left; 
 		width: $picture-width; 
 		height: 125px; 
+	}
+	
+	.like-container {
+		position: absolute;
+		bottom: 10px;
+		left: $picture-left - 60;
+	}
+	
+	.status-container {
+		color: $color;
+		font-size: 12px;
+		font-weight: normal;
 	}
 	
 	.content-container {
 		font-size: 25px;
 		position: absolute;
 		left: $picture-left + $picture-width + 35;
-		bottom: 10px;
+		bottom: 2px;
 		
 		.link-container {
-			font-size: 11px;
-			margin: 5px;
-			margin-left: 30px;
+			@include text-container(1, 11px);
 		}
+		
+		
 	}
 	
 }

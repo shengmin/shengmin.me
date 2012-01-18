@@ -71,7 +71,7 @@
 		month: 9,
 		events: [
 			new Event({
-				title: 'Started internship at Oracle as Software Engineering Intern',
+				title: 'Started internship at Oracle / Endeca as Software Engineering Intern',
 				location: 'Boston, MA',
 				pictureUrl: 'img/content/oracle.jpg',
 				highlights: [
